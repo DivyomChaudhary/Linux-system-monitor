@@ -1,24 +1,24 @@
-##🐧 System Resource Monitor (sys_monitor.sh)
+🐧 System Resource Monitor (sys_monitor.sh)
 
 A lightweight Bash script designed for continuous, real-time monitoring of essential system resources (CPU, Memory, Disk) on Linux environments. It sends color-coded alerts when usage exceeds defined thresholds.
 
-##💡 Quick Overview
+💡 Quick Overview
 
-#Feature
+Feature
 
 Description
 
-#Purpose
+Purpose
 
 Real-time system monitoring and alerting.
 
-#Environment
+Environment
 
 Strictly Linux/Unix only (requires top, free, awk, tput).
 
 Alerts
 
-Prints a $\text{RED}$ alert to the console if a threshold is breached.
+Prints a RED alert to the console if a threshold is breached.
 
 Refresh
 
@@ -66,25 +66,25 @@ CPU_THRESHOLD
 
 CPU Usage
 
-80
+10
 
-Alert if CPU utilization $\ge 10\%$
+Alert if CPU utilization >= n%
 
 MEMORY_THRESHOLD
 
 Memory Usage
 
-80
+10
 
-Alert if Memory utilization $\ge 10\%$
+Alert if Memory utilization >= n%
 
 DISK_THRESHOLD
 
 Root Disk (/) Usage
 
-80
+10
 
-Alert if Disk usage percentage $\ge 10\%$
+Alert if Disk usage percentage >= 10%
 
 🚀 Execution Guide
 
@@ -105,29 +105,6 @@ Execute the script from your terminal. It will clear the screen and display real
 
 ./sys_monitor.sh
 
-
 4. Stop Monitoring
 
 Press Ctrl + C to gracefully exit the script's infinite loop.
-
-🧩 Troubleshooting and Common Errors
-
-The most common issues relate to inconsistencies in command output across different Linux kernel versions.
-
-Error Message
-
-Cause
-
-Resolution
-
-./sys_monitor.sh: X: command not found
-
-A required utility (bc, top, or free) is missing from the system.
-
-Install the missing package(s) using your distribution's package manager (e.g., apt install procps bc).
-
-Incorrect CPU/Memory calculation (e.g., high numbers)
-
-The field numbers used by awk ($2, $4, etc.) in the top or free commands are incorrect for your Linux distribution's output format.
-
-Modify the awk portion of the script to match the field containing the idle CPU or available memory on your specific system.
