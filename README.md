@@ -1,18 +1,18 @@
-🐧 System Resource Monitor (sys_monitor.sh)
+##🐧 System Resource Monitor (sys_monitor.sh)
 
 A lightweight Bash script designed for continuous, real-time monitoring of essential system resources (CPU, Memory, Disk) on Linux environments. It sends color-coded alerts when usage exceeds defined thresholds.
 
-💡 Quick Overview
+##💡 Quick Overview
 
-Feature
+#Feature
 
 Description
 
-Purpose
+#Purpose
 
 Real-time system monitoring and alerting.
 
-Environment
+#Environment
 
 Strictly Linux/Unix only (requires top, free, awk, tput).
 
